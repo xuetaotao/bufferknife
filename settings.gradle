@@ -8,4 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "bufferknife"
 include ':app'
-include ':bindview'
+include ':annotation'
+include ':annotationProcess'
+include ':annotationReflect'

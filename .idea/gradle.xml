@@ -10,8 +10,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/annotation" />
+            <option value="$PROJECT_DIR$/annotationProcess" />
+            <option value="$PROJECT_DIR$/annotationReflect" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/bindview" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
