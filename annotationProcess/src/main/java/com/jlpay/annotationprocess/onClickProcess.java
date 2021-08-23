@@ -10,9 +10,11 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
 /**
+ * 本次练习暂时没有用到APT，如果需要使用的话，思路如下：
+ * 在process方法中，自己写Java代码字符串 或者 通过 javapoet 生成Java代码
  * 这里便是APT的经典应用的地方：生成Java文件
  */
-@SupportedAnnotationTypes({"com.jlpay.bindview.onClick", "com.jlpay.bindview.onLongClick"})
+@SupportedAnnotationTypes({"com.jlpay.bindview.OnClick", "com.jlpay.bindview.OnLongClick"})
 public class onClickProcess extends AbstractProcessor {
 
     /**
@@ -23,12 +25,16 @@ public class onClickProcess extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
         Messager messager = processingEnv.getMessager();
-        messager.printMessage(Diagnostic.Kind.NOTE, "=====>onClickProcess");
+        //可以在执行Javac编译的时候，打印出来日志
+        messager.printMessage(Diagnostic.Kind.WARNING, "=========>onClickProcess");
         return false;
     }
 
 //    @Override
 //    public Set<String> getSupportedAnnotationTypes() {
-//        return super.getSupportedAnnotationTypes();
+//        HashSet<String> stringHashSet = new HashSet<>();
+//        stringHashSet.add(OnClick.class.getCanonicalName());
+//        stringHashSet.add(OnLongClick.class.getCanonicalName());
+//        return stringHashSet;
 //    }
 }

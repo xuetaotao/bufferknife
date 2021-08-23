@@ -36,8 +36,8 @@ public class AnnotationReflect {
                         });
                     }
                 }
-
             }
+
             OnLongClick onLongClickAnnotation = method.getAnnotation(OnLongClick.class);
             if (onLongClickAnnotation != null) {
                 int[] values = onLongClickAnnotation.value();
