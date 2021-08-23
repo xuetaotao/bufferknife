@@ -1,8 +1,14 @@
 
-实现
+题目：
 利用反射、注解、动态代理实现OnClick与OnLongClick事件的自动注入
 
 @Click({R.id.bottom,R.id.end})
 public void abc(View view){
 
 }
+
+实现思路1：利用APT在注解处理器中自动生成ActivityBinding的Java类文件，然后利用反射实现绑定和调用方法(TODO 后续实现)
+
+实现思路2：只利用注解和反射（即这里的annotationReflect）的实现方式实现(已实现)
+
+实现思路3：利用反射、注解、动态代理实现

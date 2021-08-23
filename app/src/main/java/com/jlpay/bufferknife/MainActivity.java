@@ -1,5 +1,6 @@
 package com.jlpay.bufferknife;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -42,5 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "btn_onlongclick 的 LongClick", Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    /**
+     * 第三种思路：
+     * 利用反射、注解、动态代理实现OnClick与OnLongClick事件的自动注入
+     *
+     * @param view
+     */
+    public void annotationReflectProxy(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
